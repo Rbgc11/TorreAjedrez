@@ -153,5 +153,37 @@ public class MainApp {
 			torre=new Torre(elegirColor(), elegirColumnaInicial());
 		}
 		
+		//Metodo mover
+		private static void mover() {
+			Direccion direccion=null;
+			int pasos;
+			if (torre == null)
+			{
+				System.out.println("No existe la torre para mover.");
+			} else 
+			{
+				mostrarMenuDirecciones();	
+				direccion=elegirDireccion();
+				
+				if (direccion.equals(Direccion.ENROQUE_CORTO) || direccion.equals(Direccion.ENROQUE_LARGO)) {
+					try {
+						torre.enrocar(direccion);
+					} catch (OperationNotSupportedException pos) {
+						System.out.println(pos.getMessage());
+					}
+				} else
+				{
+					System.out.print("Introduzca la cantidad de pasos a dar: ");
+					pasos = Entrada.entero();
+					
+					try {
+						torre.mover(direccion, pasos);
+					} catch (OperationNotSupportedException pos) {
+						System.out.println(pos.getMessage());
+					}
+				}
+			}
+		}
+		
 		
 }
