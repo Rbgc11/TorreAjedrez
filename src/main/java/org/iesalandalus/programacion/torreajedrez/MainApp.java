@@ -37,4 +37,13 @@ public class MainApp {
 		}
 	}
 	
+	//Metodo mostrarMenu
+	private static void mostrarMenu() { 
+		System.out.println("1. Crear una torre por defecto.");
+		System.out.println("2. Crear una torre de un color.");
+		System.out.println("3. Crear una torre de un color en una columna inicial dada ('c' o 'f'), ");
+		System.out.println("4. Mover la torre.");
+		System.out.println("5. Salir.");
+	}
+	
 }
