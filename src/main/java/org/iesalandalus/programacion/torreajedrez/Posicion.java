@@ -21,8 +21,13 @@ public class Posicion {
 			throw new IllegalArgumentException ("ERROR: La columna tiene que ser estar entre la a y h"); 
 		}else {
 			this.columna = columna;
-
 	}
 }
+	//Constructores
+	//Constructor posicion de entrada
+	public Posicion (int fila, char columna) {
+		setFila(fila);
+		setColumna(columna);
+	}
 
 }
