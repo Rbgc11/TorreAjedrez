@@ -1,6 +1,10 @@
 package org.iesalandalus.programacion.torreajedrez;
 
+import java.util.Objects;
+
 public class Posicion {
+	
+
 	private int fila;
 	private char columna;
 	public int getFila() {
@@ -39,5 +43,22 @@ public class Posicion {
 		setFila(pos.getFila()); //Si no es nulo se asigna automáticamente del set validado
 		setColumna(pos.getColumna());
 	}
-
+	//Metodo hashCode y equals
+	@Override
+	public int hashCode() {
+		return Objects.hash(columna, fila);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Posicion other = (Posicion) obj;
+		return columna == other.columna && fila == other.fila;
+	}
+	
+	
 }
