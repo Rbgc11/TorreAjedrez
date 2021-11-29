@@ -23,6 +23,24 @@ public class Torre {
 		}
 	}
 	
+	//Constructor que acepte como parámetros el color y columna inicial
+	public Torre(Color color, char columna) {
+		setColor(color);
+		
+		if ( columna=='a' || columna == 'h'  ) 
+		{
+			if (color.equals(Color.BLANCO)) 
+			{
+				setPosicion(new Posicion(1,columna));
+			} else
+			{
+				setPosicion(new Posicion(8,columna));
+			}
+		} else
+			throw new IllegalArgumentException("ERROR: Columna no válida.");
+	}
+	
+	
 	//Constructores
 	public Color getColor() {
 	return color;
