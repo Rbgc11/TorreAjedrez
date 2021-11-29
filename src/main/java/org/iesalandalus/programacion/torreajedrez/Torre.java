@@ -114,6 +114,31 @@ public class Torre {
 			throw new NullPointerException("ERROR: La direccion no puede ser nula");
 		}
 	}
+	//Metodo Enrocar
+	public void enrocar (Direccion direccionCorrecta) throws OperationNotSupportedException {
+		if (direccionCorrecta==null) {
+			throw new NullPointerException("ERROR: La direccion no puede ser nula.");
+		}
+		if (direccionCorrecta == Direccion.ENROQUE_CORTO) {
+			if (posicion.getColumna()=='h' && (posicion.getFila()==1 && color==Color.BLANCO) || (posicion.getFila()==8 && color==Color.NEGRO))
+			{
+				setPosicion(new Posicion(posicion.getFila(),'f'));
+			} else 
+			{
+				throw new OperationNotSupportedException("ERROR: Movimiento de enroque no valido.");
+			}
+			
+		}else{
+			if (posicion.getColumna()=='a' && (posicion.getFila()==1 && color== Color.BLANCO) || (posicion.getFila()==8  && color==Color.NEGRO))
+			{
+				setPosicion(new Posicion(posicion.getFila(),'d'));
+			}else 
+			{
+				throw new OperationNotSupportedException("ERROR: Movimiento de enroque no valido.");
+			} 
+	
+		}
+	}
 	//Constructores
 	public Color getColor() {
 	return color;
