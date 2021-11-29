@@ -138,4 +138,12 @@ public class MainApp {
 			return direccion;
 		}
 		
+		//Metodo crearTorreDefecto
+		private static void crearTorreDefecto() {
+			torre=new Torre();
+		}
+		
+		
+		
+		
 }
