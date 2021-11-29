@@ -12,7 +12,10 @@ public class MainApp {
 	public static void main(String[] args) {
 		int control=1;
 		int seleccion;
+		System.out.println("=====================================");
 		System.out.println("Torre Ajedrez");
+		System.out.println("=====================================");
+
 		do {
 			mostrarMenu();
 			seleccion=elegirOpcion();
@@ -23,6 +26,15 @@ public class MainApp {
 				control=0;
 			}
 		} while (control!=0);
+	}
+	
+	//Metodo mostrarTorre
+	private static void mostrarTorre() {
+		try {
+			System.out.println(torre.toString());
+		} catch (NullPointerException pos){
+			System.out.println("ERROR: La torre no fue creada.");
+		}
 	}
 	
 }
