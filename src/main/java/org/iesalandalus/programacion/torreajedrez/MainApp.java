@@ -148,5 +148,10 @@ public class MainApp {
 			torre=new Torre(elegirColor());
 		}
 		
+		//Metodo crearTorreColorColumna
+		private static void crearTorreColorColumna() {
+			torre=new Torre(elegirColor(), elegirColumnaInicial());
+		}
+		
 		
 }
