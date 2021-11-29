@@ -55,5 +55,29 @@ public class MainApp {
 			} while (opcionMenu<1 || opcionMenu>5);
 			return opcionMenu;	
 		}
+		
+		//Metodo elegirColor
+		private static Color elegirColor() {
+			Color color=null;
+			int opcionColor=0;
+			do {
+				System.out.println("===============");
+				System.out.println("1. Blancas.");
+				System.out.println("2. Negras.");
+				System.out.print("Escoge un color: ");
+				opcionColor=Entrada.entero();
+			} while (opcionColor!=1 && opcionColor!=2);
+			
+			switch (opcionColor) {
+			case 1:
+				color=Color.BLANCO;
+				break;
+			case 2:
+				color=Color.NEGRO;
+				break;
+			}
+			
+			return color;
+		}
 	
 }
