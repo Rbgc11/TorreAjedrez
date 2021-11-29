@@ -9,24 +9,7 @@ public class MainApp {
 	private static Torre torre;
 
 
-	public static void main(String[] args) {
-		int control=1;
-		int seleccion;
-		System.out.println("=====================================");
-		System.out.println("Torre Ajedrez");
-		System.out.println("=====================================");
 
-		do {
-			mostrarMenu();
-			seleccion=elegirOpcion();
-			ejecutarOpcion(seleccion);
-			mostrarTorre();
-			
-			if (seleccion==5) {
-				control=0;
-			}
-		} while (control!=0);
-	}
 	
 	//Metodo mostrarTorre
 	private static void mostrarTorre() {
@@ -184,6 +167,28 @@ public class MainApp {
 				}
 			}
 		}
+		
+		//Metodo ejecutarOpcion
+		private static void ejecutarOpcion(int opcionEjecucion) {
+			switch (opcionEjecucion) {
+			case 1:
+				crearTorreDefecto();
+				break;
+			case 2:
+				crearTorreColor();
+				break;
+			case 3:
+				crearTorreColorColumna();
+				break;
+			case 4:
+				mover();
+				break;
+			case 5:
+				System.out.println("Adiós");
+				break;
+			}
+		}
+		
 		
 		
 }
