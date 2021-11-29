@@ -29,5 +29,15 @@ public class Posicion {
 		setFila(fila);
 		setColumna(columna);
 	}
+	
+	// Constructor copia
+	public Posicion (Posicion pos) {
+		if (pos == null) //Comprobación de que sea nulo posicion 
+		{
+			throw new NullPointerException("ERROR: No es posible copiar una posición nula."); //Lanzar la excepción
+		}
+		setFila(pos.getFila()); //Si no es nulo se asigna automáticamente del set validado
+		setColumna(pos.getColumna());
+	}
 
 }
