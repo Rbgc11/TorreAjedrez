@@ -4,7 +4,7 @@ public class Torre {
 	//Atributos
 	private Color color;
 	private Posicion posicion;
-		
+	
 	//Constructores
 	public Color getColor() {
 	return color;
