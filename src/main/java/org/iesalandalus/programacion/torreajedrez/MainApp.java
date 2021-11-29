@@ -79,5 +79,17 @@ public class MainApp {
 			
 			return color;
 		}
+		
+		//Metodo elegirColumnaInicial
+		private static char elegirColumnaInicial() {
+			char columna = 0;
+			
+			do {
+				System.out.print("Introduzca la columna deseada ('C' o 'F'): ");
+				columna=Entrada.caracter();
+			} while (columna!='a' && columna!='A' && columna!='h' && columna!='H');
+		
+			return columna;
+		}
 	
 }
