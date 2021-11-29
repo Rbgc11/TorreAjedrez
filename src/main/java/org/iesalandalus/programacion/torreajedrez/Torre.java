@@ -11,6 +11,18 @@ public class Torre {
 		setPosicion(new Posicion(8,'h'));
 	}
 	
+	//Constructor con entrada de color
+	public Torre(Color color) {
+		setColor(color);
+		if (color.equals(Color.BLANCO))
+		{
+			setPosicion(new Posicion(1,'h'));
+		} else
+		{
+			setPosicion(new Posicion(8,'h'));
+		}
+	}
+	
 	//Constructores
 	public Color getColor() {
 	return color;
